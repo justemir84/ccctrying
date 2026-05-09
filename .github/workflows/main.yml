@@ -39,6 +39,9 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
+      - name: Expo Prebuild (android klasörünü üret)
+        run: pnpm expo prebuild --platform android --clean --no-install
+
       - name: Build Android APK
         run: |
           cd android
